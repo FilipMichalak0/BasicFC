@@ -1,6 +1,6 @@
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(BASIC_quadcopter main.c )
+add_executable(BASIC_quadcopter main.c something.c)
 
 pico_set_program_name(BASIC_quadcopter "BASIC_quadcopter")
 pico_set_program_version(BASIC_quadcopter "0.1")

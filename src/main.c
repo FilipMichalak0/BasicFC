@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
-
+#include "something.h"
 
 int main()
 {
     stdio_init_all();
 
     while (true) {
-        printf("Hello, world!\n");
+        somefile();
         sleep_ms(10000);
     }
 }
