@@ -8,6 +8,6 @@ int main()
 
     while (true) {
         printf("Hello, world!\n");
-        sleep_ms(100202);
+        sleep_ms(10000);
     }
 }
