@@ -28,9 +28,9 @@ void initMotors(oneshot* ONESHOT) // initialization of all PWM channels needed f
     pwm_set_wrap(ONESHOT->slice_num_RB, 249);
 
     pwm_set_chan_level(ONESHOT->slice_num_LF, PWM_CHAN_A, 125);
-    pwm_set_chan_level(ONESHOT->slice_num_LB, PWM_CHAN_A, 125);
+    pwm_set_chan_level(ONESHOT->slice_num_LB, PWM_CHAN_B, 125);
     pwm_set_chan_level(ONESHOT->slice_num_RF, PWM_CHAN_A, 125);
-    pwm_set_chan_level(ONESHOT->slice_num_RB, PWM_CHAN_A, 125);
+    pwm_set_chan_level(ONESHOT->slice_num_RB, PWM_CHAN_B, 125);
 
     pwm_set_enabled(ONESHOT->slice_num_LF, true);
     pwm_set_enabled(ONESHOT->slice_num_LB, true);
@@ -38,7 +38,7 @@ void initMotors(oneshot* ONESHOT) // initialization of all PWM channels needed f
     pwm_set_enabled(ONESHOT->slice_num_RB, true);
 }
 
-void writeMotors(oneshot* ONESHOT)
+void writeMotors(oneshot* ONESHOT) 
 {
     pwm_set_chan_level(ONESHOT->slice_num_LF, PWM_CHAN_A, ONESHOT->fillLF);
     pwm_set_chan_level(ONESHOT->slice_num_LB, PWM_CHAN_B, ONESHOT->fillLB);
